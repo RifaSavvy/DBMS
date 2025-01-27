@@ -10,5 +10,5 @@ select count(p_id) AS Total_No_of_Products from products;
 
 select sum(p_price) AS Total_Price_of_all_Products from products;
 
-select avg(p_price) AS Total_Price_of_all_Products from products;
+select avg(p_price) AS Average_Price_of_all_Products from products;
 
