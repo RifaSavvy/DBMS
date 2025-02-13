@@ -1,0 +1,127 @@
+
+SQL*Plus: Release 10.2.0.1.0 - Production on Thu Feb 13 10:15:06 2025
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+SQL> connect
+Enter user-name: system
+Enter password: 
+Connected.
+SQL> set serveroutput on;
+SQL> @haha.sql
+
+LOWER('ASIETISFORTECHGEEKSON
+----------------------------
+asiet is for tech geeks only
+
+SQL> @haha.sql
+
+UPPER('ASIETISONLYFORGE
+-----------------------
+ASIET IS ONLY FOR GEEKS
+
+SQL> @haha.sql
+
+INITCAP('AIISASUBBRANCHO
+------------------------
+Ai Is A Subbranch Of Cse
+
+SQL> @haha.sql
+
+INITCAP('AIISASUBBRANCHO
+------------------------
+Ai Is A Subbranch Of Cse
+
+SQL> @haha.sql
+
+CONCA
+-----
+CSEAI
+
+SQL> @haha.sql
+
+CONCAT(NU
+---------
+CSE
+
+SQL> @haha.sql
+
+LENGTH('LEARNINGISALWAYSFUN')
+-----------------------------
+			   22
+
+SQL> @haha.sql
+
+LENGTH('DATABASE')
+------------------
+		12
+
+SQL> @haha.sql
+
+SUBSTR('DATABASEMA
+------------------
+ Management System
+
+SQL> @haha.sql
+SP2-0734: unknown command beginning "elect SUBS..." - rest of line ignored.
+SQL> @haha.sql
+
+SUBSTR(
+-------
+ Manage
+
+SQL> @haha.sql
+
+INSTR('GOOGLEAPPSARETHEGREATAPPLICATIONS','APP')
+------------------------------------------------
+					       8
+
+SQL> @haha.sql
+
+INSTR('GOOGLEAPPSARETHEGREATAPPLICATIONS','APP',1,2)
+----------------------------------------------------
+						  27
+
+SQL> @haha.sql
+
+LPAD(
+-----
+**100
+
+SQL> @haha.sql
+
+RPAD(
+-----
+100##
+
+SQL> @haha.sql
+
+LPAD('HELLO',21,'ASIE
+---------------------
+asietasietasietahello
+
+SQL> @haha.sql
+
+RPAD('EARN',19,'RES
+-------------------
+earnrespectrespectr
+
+SQL> @haha.sql
+
+TRIM('
+------
+NDROID
+
+SQL> @haha.sql
+
+TRIM('A
+-------
+ANDROID
+
+SQL> @haha.sql
+
+REPLACE('DATAMANAGE
+-------------------
+Database Management
+
+SQL>
