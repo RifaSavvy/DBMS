@@ -1,0 +1,195 @@
+
+SQL*Plus: Release 10.2.0.1.0 - Production on Thu Feb 13 11:29:40 2025
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+SQL> connect
+Enter user-name: system
+Enter password: 
+Connected.
+SQL> set serveroutput on;
+SQL> @a.sql
+
+Table created.
+
+SQL> @a.sql
+
+1 row created.
+
+SQL> @a.ql
+SP2-0310: unable to open file "a.ql"
+SQL> @a.sql
+
+1 row created.
+
+SQL> @a.sql
+insert into sailors values(3,'Amy',2,11)
+*
+ERROR at line 1:
+ORA-02290: check constraint (SYSTEM.SYS_C004036) violated
+
+
+SQL> @a.sql
+insert into sailors values(3,'Amy',2,11)
+*
+ERROR at line 1:
+ORA-02290: check constraint (SYSTEM.SYS_C004036) violated
+
+
+SQL> @a.sql
+
+Table created.
+
+SQL> @a.sql
+
+1 row created.
+
+SQL> @a.sql
+
+1 row created.
+
+SQL> @a.sql
+
+1 row created.
+
+SQL> @a.sql
+
+1 row created.
+
+SQL> @a.sql
+
+1 row created.
+
+SQL> @a.sql
+insert into sailors values(3,'Amy',2,11)
+*
+ERROR at line 1:
+ORA-02290: check constraint (SYSTEM.SYS_C004036) violated
+
+
+SQL> @a.sql
+insert into sailors values(3,'Amy',2,11)
+*
+ERROR at line 1:
+ORA-02290: check constraint (SYSTEM.SYS_C004036) violated
+
+
+SQL> @a.sql
+
+1 row created.
+
+SQL> @a.sql
+
+Table created.
+
+SQL> @a.sql
+
+1 row created.
+
+SQL> @a.sql
+
+1 row created.
+
+SQL> @a.sql
+
+1 row created.
+
+SQL> @a.sql
+
+1 row created.
+
+SQL> select * from sailors 
+  2  ;
+
+       SID SNAME	  RATING	AGE
+---------- ---------- ---------- ----------
+	 1 Ria		       9	 17
+	 2 Risha	       7	 21
+	 4 Elsa 	       6	 31
+	 3 Amy		       2	 19
+
+SQL> select * from boat
+  2  ;
+
+       BID BNAME      COLOR
+---------- ---------- ----------
+       111 Titanic    red
+       121 Sanco      yellow
+       131 Corpus     black
+       141 Marco      red
+
+SQL> select * from reserves
+  2  ;
+
+       SID	  BID DAY
+---------- ---------- --------
+	 1	  111 01-02-25
+	 2	  121 21-12-09
+	 3	  131 27-08-13
+	 4	  141 01-10-25
+
+SQL> @a.sql
+
+SNAME
+----------
+Ria
+Risha
+Elsa
+
+SQL> @a.sql
+select s.sid from sailors s where s..rating =10 union select r.id from reserves r where r.bid = 111
+                                    *
+ERROR at line 1:
+ORA-01747: invalid user.table.column, table.column, or column specification
+
+
+SQL> @a.sql
+
+       SID
+----------
+	 1
+
+SQL> @a.sql
+
+       SID
+----------
+	 1
+	 4
+
+SQL> @a.sql
+
+no rows selected
+
+SQL> @a.sql
+SQL> ;
+  1* select s.name from sailors s where s.sid IN(select r.sid from reserves r where r.bid=121)
+SQL> @a.sql
+SQL> ;
+  1* select s.sname from sailors s where s.sid IN(select r.sid from reserves r where r.bid=121)
+SQL> @a.sql;
+  2  ;
+select s.name from sailors s where s.sid exists(select r.sid from reserves r where r.bid=121)
+                                         *
+ERROR at line 1:
+ORA-00920: invalid relational operator
+
+
+SQL> @a.sql
+
+SNAME		  AGE
+---------- ----------
+Ria		   17
+
+SQL> @a.sql
+
+SNAME		  AGE
+---------- ----------
+Ria		   17
+
+SQL> @a.sql
+
+SNAME
+----------
+Risha
+
+SQL>      
